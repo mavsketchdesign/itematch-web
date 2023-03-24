@@ -1,0 +1,7 @@
+{
+  "name": "itematch",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
