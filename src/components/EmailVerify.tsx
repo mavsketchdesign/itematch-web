@@ -1,10 +1,10 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, IonButton, IonAvatar, IonGrid, IonRow, IonCol, IonInput, IonSpinner } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, IonButton, IonAvatar, IonGrid, IonRow, IonCol, IonInput, IonSpinner, IonLoading } from '@ionic/react';
 import { useState, useEffect } from 'react';
 import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
 import { url } from 'inspector';
 import {onlyNumbers, ValidateEmail, PasswordValidator} from '../utilities/tools';
 import OtpInput from 'react-otp-input';
-import {validateEmail} from '../actions/UserAction';
+import {validateEmail, tokenResendOTP} from '../actions/UserAction';
 import {useDispatch, useSelector} from 'react-redux';
 
 
@@ -13,6 +13,7 @@ const EmailVerify: React.FC<any> = ({signup, setStep}) => {
 
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
+    const [requestOTP, setRequestOTP] = useState(false);
     const [error, setError] = useState(false);
     const [otp, setOtp] = useState('');
 
@@ -21,7 +22,8 @@ const EmailVerify: React.FC<any> = ({signup, setStep}) => {
 
             setLoading(false);
             setError(false);
-            setStep("SMSverify");
+            // setStep("SMSverify");
+            setStep("FinalStep");
             
         } else {
             setLoading(false);
@@ -36,6 +38,19 @@ const EmailVerify: React.FC<any> = ({signup, setStep}) => {
             "otp": String(otp)
         }
         dispatch(validateEmail(data, response));
+    }
+
+    const resendOTP = () => {
+        setRequestOTP(true);
+
+        const token = localStorage.getItem("user_token");
+        console.log("this is the token", token);
+        
+        dispatch(tokenResendOTP(token));
+
+        setTimeout(()=>{
+            setRequestOTP(false);
+        }, 60000);
     }
 
     useEffect(()=>{ 
@@ -98,6 +113,15 @@ const EmailVerify: React.FC<any> = ({signup, setStep}) => {
                                     </IonButton>
                                 }
                             </div>
+                            {
+                                !requestOTP &&
+                                <p className="margin-top-20">It may take up to a minute to receive the otp email. Incase you didn't receive it at all, <a style={{color: "black", fontWeight: "bold", cursor: "pointer"}} onClick={()=> {resendOTP();}}>Resend OTP</a>.</p>
+                            }
+                            {
+                                requestOTP &&
+                                <IonLoading isOpen={true} message="OTP email request is processing" duration={3000} />
+                            }
+                            
                             
                         </div>
                     </div>

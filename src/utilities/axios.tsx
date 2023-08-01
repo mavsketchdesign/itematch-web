@@ -111,7 +111,11 @@ const baseURL = 'http://itematchdev-env.eba-mskfp5su.us-east-1.elasticbeanstalk.
 // })
 
 export const itematchAPI = axios.create({
-    baseURL: "http://itematchdev-env.eba-mskfp5su.us-east-1.elasticbeanstalk.com/api/"
+    baseURL: "https://api.itematch.com/api/",
+    headers: {
+        		'Content-Type': 'application/json',
+        		accept: 'application/json',
+        	},
 })
 itematchAPI.interceptors.request.use((config) => {
     config.headers.token = localStorage.getItem('user_token')

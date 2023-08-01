@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 11;
+    z-index: 111;
 
     .transparent {
         background: white !important;
@@ -28,6 +28,7 @@
 
         .logo_wrapper {
             height: 45px;
+            cursor: pointer;
             img {
                 height: 45px;
                 width: auto;
@@ -141,14 +142,31 @@
             padding: 5px;
             display: flex;
             align-items: center;
+            position: relative;
+            z-index: 111111;
+            cursor: pointer;
 
             .avatar {
                 width: 40px;
                 height: 100%;
+                background: #ffffff;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .initial {
+                    font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
+                    color: #3d3d3d;
+                    font-size: 16;
+                }
+
+                .default_icon {
+                    height: 30px;
+                }
             }
 
             .menu_bar {
@@ -163,6 +181,128 @@
                 
             }
 
+        }
+
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.40);
+            z-index: 1111;
+        }
+
+        .side_bar {
+            position: absolute;
+            right: 20px;
+            top: 90px;
+            width: 300px;
+            height: 75vh;
+            max-height: 700px;
+            min-height: 300px;
+            background: white;
+            border: 10px solid grey;
+            border-radius: 20px;
+            z-index: 11111111;
+            box-sizing: border-box;
+            padding: 10px;
+            overflow: hidden;
+
+            .title_header {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 50px;
+                color: black;
+                
+                .name {
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        font-weight: bold;
+                        font-size: 19px;
+                    }
+
+                    .badge {
+                        height: 15px;
+                        margin-left: 5px;
+                    }
+                }
+
+                .user_type {
+                    font-size: 10px;
+                   
+                }
+            }
+
+            .option_wrapper {
+                width: 100%;
+                height: calc(100% - 85px);
+
+                overflow-y: hidden;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+
+                .option_inner_wrapper {
+                    width: 100%;
+                    height: 100%;
+                    overflow-y: auto;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-column-gap: 10px;
+                    grid-row-gap: 10px;
+                    box-sizing: border-box;
+                    padding: 10px;
+
+                    .disabled {
+                        cursor: not-allowed !important;
+                        opacity: 0.5;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                    .option_box {
+                        aspect-ratio: 1/ 1;
+                        border-radius: 20px;
+                        transition: transform 0.1s ease-in-out;
+                        position: relative;
+                        box-sizing: border-box;
+                        padding: 10px;
+                        cursor: pointer;
+                        background: #f1f1f1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        
+                        .option_title {
+                            font-size: 12px;
+                            font-weight: bold;
+                            width: 100%;
+                            height: 30%;
+                            text-align: left;
+                            color: black;
+                        }
+
+                        .icon_wrapper {
+                            height: 70%;
+                            .icon {
+                                height: 40px;
+                            }
+                        }
+
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+
+                    }
+                }
+            }
         }
     }
 }

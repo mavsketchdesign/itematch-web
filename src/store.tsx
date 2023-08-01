@@ -11,7 +11,7 @@ const store = createStore(
   compose(
     applyMiddleware(...middleware),
     //-- below will not work on Chrome incognito, Mobile Devices, iOS
-    (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+    //(window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
   )
 );
 

@@ -1,0 +1,2193 @@
+@media only screen and (min-width: 992px) {
+  .large {
+    --width: 80%;
+    --height: 70%;
+    --min-width: 300px;
+    --max-width: 800px;
+    --min-height: 300px;
+  }
+  .med {
+    --width: 40%;
+    --height: 55%;
+    --min-width: 300px;
+    --max-width: 500px;
+    --min-height: 300px;
+    --max-height: 450px;
+  }
+  .sm {
+    --width: 40%;
+    --height: 35%;
+    --min-width: 200px;
+    --max-width: 700px;
+    --min-height: 200px;
+  }
+  .EditListingModal::part(content) {
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 10px solid #626262;
+  }
+  .EditListingModal::part(backdrop) {
+    opacity: 0.5;
+    --backdrop-opacity: 0.5;
+  }
+  .EditListingModal #ion-react-wrapper {
+    background: white;
+    position: relative;
+    border-radius: 30px;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .message {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .message span {
+    width: 100%;
+    font-size: 13px;
+    color: black;
+    text-align: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button .save_edit {
+    min-height: 25px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 6px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: white;
+    background: linear-gradient(to right, #FF0606 0%, #FF0681 100%);
+    --background: transparent !important;
+    --padding-start: 15px !important;
+    --padding-end: 15px !important;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    cursor: pointer;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button .save_edit::part(native) {
+    --border-radius: 7px !important;
+    --box-shadow: none !important;
+    /* background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%); */
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button .white {
+    border: black 1px solid;
+    background: white !important;
+    color: black !important;
+    margin-right: 10px;
+  }
+  .EditListingModal #ion-react-wrapper .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dfdfdf;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .EditListingModal #ion-react-wrapper .closeButton img {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 5px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: white;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter .disabled {
+    opacity: 0.1;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter .save_edit {
+    min-height: 25px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 6px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: white;
+    background: linear-gradient(to right, #FF0606 0%, #FF0681 100%);
+    --background: transparent !important;
+    --padding-start: 15px !important;
+    --padding-end: 15px !important;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    cursor: pointer;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter .save_edit::part(native) {
+    --border-radius: 7px !important;
+    --box-shadow: none !important;
+    /* background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%); */
+  }
+  .EditListingModal #ion-react-wrapper ion-content {
+    --overflow-y: auto;
+    --background: white;
+    height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title {
+    margin-bottom: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 20%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .header_text {
+    display: flex;
+    align-items: flex-end;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .header_text img {
+    height: 30px;
+    width: auto;
+    margin-right: 5px;
+    margin-bottom: -1px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .header_text span {
+    font-size: 25px;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    color: #000000;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .sub_text {
+    color: black;
+    font-size: 15px;
+    margin: 0 0 10px !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box {
+    box-sizing: border-box;
+    padding: 30px 20px 0;
+    color: black;
+    height: 80%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form ion-item {
+    min-height: 50px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .illustration_wrapper {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .illustration_wrapper .illustration {
+    height: 150px;
+    margin-right: 5px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .illustration_wrapper .illustration_details {
+    font-size: 14px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .title {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .description {
+    font-size: 10px;
+    font-style: italic;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select {
+    --background: white !important;
+    border-radius: 15px;
+    --border-radius: 15px;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    border: 1px solid black;
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select::part(native) {
+    --min-height: 50px !important;
+    --max-width: 200px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form select {
+    --background: transparent!important;
+    background: transparent !important;
+    border: none;
+    color: grey;
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    --highlight-color-focused: rgba(0, 0, 0, 0);
+    --min-height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form {
+    --background: white !important;
+    border-radius: 15px;
+    --border-radius: 15px;
+    border: 1px solid black;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form::part(native) {
+    --min-height: 100% !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .textarea {
+    min-height: 200px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .textarea .textarea-wrapper {
+    height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .group_title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid {
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    display: grid;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .active .check {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0px;
+    width: auto;
+    -webkit-animation: check_animate_amenity 0.1s ease-in-out;
+            animation: check_animate_amenity 0.1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes check_animate_amenity {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 20px;
+    }
+  }
+  @keyframes check_animate_amenity {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 20px;
+    }
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #1BD2B2;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box {
+    aspect-ratio: 1/1;
+    background-color: white;
+    color: #fff;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.1s ease-in-out;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box .icon {
+    width: 40%;
+    margin-bottom: 15px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box span {
+    color: black;
+    font-size: 11px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    height: 25%;
+    text-align: center;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box:hover {
+    transform: scale(1.05);
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box .cat_title_box {
+    background: #D9D9D9;
+    box-shadow: 0px 0px 26px -5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 1px 5px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: -15px 0 0 5px;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box .cat_title_box img {
+    height: 30px;
+    width: auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .upload_title {
+    font-size: 12px;
+    margin: 12px 0 12px;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .upload_title .image_counter {
+    margin-left: 5px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box section {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box section p {
+    border: 1px dashed black;
+    border-radius: 10px;
+    color: black;
+    box-sizing: border-box;
+    padding: 60px 40px;
+    margin: 0;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view {
+    position: relative;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view .close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e7e7e7;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view .close img {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view .images {
+    border-radius: 10px;
+    margin: 5px;
+    height: 60px;
+    width: auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .map {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 300px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .grid .input {
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .full-width {
+    grid-template-columns: 1fr !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row span {
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input {
+    --background: white !important;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input::part(native) {
+    --min-height: 50px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select {
+    --background: white !important;
+    border-radius: 15px;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    border: 1px solid black;
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select::part(native) {
+    --min-height: 50px !important;
+    --max-width: 200px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row select {
+    --background: transparent!important;
+    background: transparent !important;
+    border: none;
+    color: grey;
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    --highlight-color-focused: rgba(0, 0, 0, 0);
+    --min-height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .grid .grid_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .grid .input {
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .full-width {
+    grid-template-columns: 1fr !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row span {
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .small_text {
+    color: #464646;
+    font-style: italic;
+    font-size: 11px;
+    max-width: 300px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input {
+    --background: white !important;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    width: 100% !important;
+    font-size: 20px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input .symbol {
+    font-weight: 500;
+    box-sizing: border-box;
+    padding-right: 5px;
+    font-size: 22px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input::part(native) {
+    --min-height: 50px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .inputText {
+    background: transparent;
+    border: none !important;
+    border-radius: 8px !important;
+    width: 100%;
+    height: 100%;
+    padding: 0 5px;
+    font-size: 16px;
+    color: black !important;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select {
+    --background: white !important;
+    border-radius: 15px;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    border: 1px solid black;
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select::part(native) {
+    --min-height: 50px !important;
+    --max-width: 200px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row select {
+    --background: transparent!important;
+    background: transparent !important;
+    border: none;
+    color: grey;
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    --highlight-color-focused: rgba(0, 0, 0, 0);
+    --min-height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .warning {
+    font-size: 12px;
+    color: rgb(255, 52, 52);
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .inactive {
+    opacity: 0.4;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .inactive .checkbox {
+    cursor: not-allowed !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .green {
+    border: 2px solid #126440;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .green .check {
+    background: #13ab69;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .orange {
+    border: 2px solid #964905;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .orange .check {
+    background: #d66809;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .red {
+    border: 2px solid #641212;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .red .check {
+    background: #b60f0f;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox:hover {
+    background-color: #dfdfdf;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox .check {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox .check img {
+    height: 17px;
+    width: auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .listing_info {
+    width: calc(100% - 60px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .listing_info .title {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .listing_info .description {
+    font-weight: 150;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 991px) {
+  .large {
+    --width: 80%;
+    --height: 70%;
+    --min-width: 300px;
+    --max-width: 800px;
+    --min-height: 300px;
+  }
+  .med {
+    --width: 90%;
+    --height: 55%;
+    --min-width: 300px;
+    --max-width: 500px;
+    --min-height: 300px;
+    --max-height: 450px;
+  }
+  .sm {
+    --width: 40%;
+    --height: 35%;
+    --min-width: 200px;
+    --max-width: 700px;
+    --min-height: 200px;
+  }
+  .EditListingModal::part(content) {
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 10px solid #626262;
+  }
+  .EditListingModal::part(backdrop) {
+    opacity: 0.5;
+    --backdrop-opacity: 0.5;
+  }
+  .EditListingModal #ion-react-wrapper {
+    background: white;
+    position: relative;
+    border-radius: 30px;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .message {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .message span {
+    width: 100%;
+    font-size: 13px;
+    color: black;
+    text-align: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button .save_edit {
+    min-height: 25px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 6px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: white;
+    background: linear-gradient(to right, #FF0606 0%, #FF0681 100%);
+    --background: transparent !important;
+    --padding-start: 15px !important;
+    --padding-end: 15px !important;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    cursor: pointer;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button .save_edit::part(native) {
+    --border-radius: 7px !important;
+    --box-shadow: none !important;
+    /* background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%); */
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button .white {
+    border: black 1px solid;
+    background: white !important;
+    color: black !important;
+    margin-right: 10px;
+  }
+  .EditListingModal #ion-react-wrapper .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dfdfdf;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .EditListingModal #ion-react-wrapper .closeButton img {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 5px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: white;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter .disabled {
+    opacity: 0.1;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter .save_edit {
+    min-height: 25px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 6px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: white;
+    background: linear-gradient(to right, #FF0606 0%, #FF0681 100%);
+    --background: transparent !important;
+    --padding-start: 15px !important;
+    --padding-end: 15px !important;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    cursor: pointer;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter .save_edit::part(native) {
+    --border-radius: 7px !important;
+    --box-shadow: none !important;
+    /* background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%); */
+  }
+  .EditListingModal #ion-react-wrapper ion-content {
+    --overflow-y: auto;
+    --background: white;
+    height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title {
+    margin-bottom: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 20%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .header_text {
+    display: flex;
+    align-items: flex-end;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .header_text img {
+    height: 30px;
+    width: auto;
+    margin-right: 5px;
+    margin-bottom: -1px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .header_text span {
+    font-size: 25px;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    color: #000000;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .sub_text {
+    color: black;
+    font-size: 15px;
+    margin: 0 0 10px !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box {
+    box-sizing: border-box;
+    padding: 30px 20px 0;
+    color: black;
+    height: 80%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form ion-item {
+    min-height: 50px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .illustration_wrapper {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .illustration_wrapper .illustration {
+    height: 150px;
+    margin-right: 5px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .illustration_wrapper .illustration_details {
+    font-size: 14px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .title {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .description {
+    font-size: 10px;
+    font-style: italic;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select {
+    --background: white !important;
+    border-radius: 15px;
+    --border-radius: 15px;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    border: 1px solid black;
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select::part(native) {
+    --min-height: 50px !important;
+    --max-width: 200px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form select {
+    --background: transparent!important;
+    background: transparent !important;
+    border: none;
+    color: grey;
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    --highlight-color-focused: rgba(0, 0, 0, 0);
+    --min-height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form {
+    --background: white !important;
+    border-radius: 15px;
+    --border-radius: 15px;
+    border: 1px solid black;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form::part(native) {
+    --min-height: 100% !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .textarea {
+    min-height: 200px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .textarea .textarea-wrapper {
+    height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .group_title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid {
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    display: grid;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .active .check {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0px;
+    width: auto;
+    -webkit-animation: check_animate_amenity 0.1s ease-in-out;
+            animation: check_animate_amenity 0.1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes check_animate_amenity {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 20px;
+    }
+  }
+  @keyframes check_animate_amenity {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 20px;
+    }
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #1BD2B2;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box {
+    aspect-ratio: 1/1;
+    background-color: white;
+    color: #fff;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.1s ease-in-out;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box .icon {
+    width: 40%;
+    margin-bottom: 15px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box span {
+    color: black;
+    font-size: 11px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    height: 25%;
+    text-align: center;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box:hover {
+    transform: scale(1.05);
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box .cat_title_box {
+    background: #D9D9D9;
+    box-shadow: 0px 0px 26px -5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 1px 5px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: -15px 0 0 5px;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box .cat_title_box img {
+    height: 30px;
+    width: auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .upload_title {
+    font-size: 12px;
+    margin: 12px 0 12px;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .upload_title .image_counter {
+    margin-left: 5px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box section {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box section p {
+    border: 1px dashed black;
+    border-radius: 10px;
+    color: black;
+    box-sizing: border-box;
+    padding: 60px 40px;
+    margin: 0;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view {
+    position: relative;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view .close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e7e7e7;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view .close img {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view .images {
+    border-radius: 10px;
+    margin: 5px;
+    height: 60px;
+    width: auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .map {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 300px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .grid .input {
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .full-width {
+    grid-template-columns: 1fr !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row span {
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input {
+    --background: white !important;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input::part(native) {
+    --min-height: 50px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select {
+    --background: white !important;
+    border-radius: 15px;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    border: 1px solid black;
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select::part(native) {
+    --min-height: 50px !important;
+    --max-width: 200px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row select {
+    --background: transparent!important;
+    background: transparent !important;
+    border: none;
+    color: grey;
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    --highlight-color-focused: rgba(0, 0, 0, 0);
+    --min-height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .grid .grid_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .grid .input {
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .full-width {
+    grid-template-columns: 1fr !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row span {
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .small_text {
+    color: #464646;
+    font-style: italic;
+    font-size: 11px;
+    max-width: 300px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input {
+    --background: white !important;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    width: 100% !important;
+    font-size: 20px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input .symbol {
+    font-weight: 500;
+    box-sizing: border-box;
+    padding-right: 5px;
+    font-size: 22px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input::part(native) {
+    --min-height: 50px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select {
+    --background: white !important;
+    border-radius: 15px;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    border: 1px solid black;
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select::part(native) {
+    --min-height: 50px !important;
+    --max-width: 200px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row select {
+    --background: transparent!important;
+    background: transparent !important;
+    border: none;
+    color: grey;
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    --highlight-color-focused: rgba(0, 0, 0, 0);
+    --min-height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .warning {
+    font-size: 12px;
+    color: rgb(255, 52, 52);
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .inactive {
+    opacity: 0.4;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .inactive .checkbox {
+    cursor: not-allowed !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .green {
+    border: 2px solid #126440;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .green .check {
+    background: #13ab69;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .orange {
+    border: 2px solid #964905;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .orange .check {
+    background: #d66809;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .red {
+    border: 2px solid #641212;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .red .check {
+    background: #b60f0f;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox:hover {
+    background-color: #dfdfdf;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox .check {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox .check img {
+    height: 17px;
+    width: auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .listing_info {
+    width: calc(100% - 60px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .listing_info .title {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .listing_info .description {
+    font-weight: 150;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .large {
+    --width: 95%;
+    --height: 80%;
+    --min-width: 300px;
+    --max-width: 800px;
+    --min-height: 300px;
+  }
+  .med {
+    --width: 95%;
+    --height: 55%;
+    --min-width: 300px;
+    --max-width: 500px;
+    --min-height: 300px;
+    --max-height: 450px;
+  }
+  .sm {
+    --width: 40%;
+    --height: 35%;
+    --min-width: 200px;
+    --max-width: 700px;
+    --min-height: 200px;
+  }
+  .EditListingModal::part(content) {
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 10px solid #626262;
+  }
+  .EditListingModal::part(backdrop) {
+    opacity: 0.5;
+    --backdrop-opacity: 0.5;
+  }
+  .EditListingModal #ion-react-wrapper {
+    background: white;
+    position: relative;
+    border-radius: 30px;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .message {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .message span {
+    width: 100%;
+    font-size: 13px;
+    color: black;
+    text-align: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button .save_edit {
+    min-height: 25px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 6px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: white;
+    background: linear-gradient(to right, #FF0606 0%, #FF0681 100%);
+    --background: transparent !important;
+    --padding-start: 15px !important;
+    --padding-end: 15px !important;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    cursor: pointer;
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button .save_edit::part(native) {
+    --border-radius: 7px !important;
+    --box-shadow: none !important;
+    /* background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%); */
+  }
+  .EditListingModal #ion-react-wrapper .confirmation_wrapper .confirm_button .white {
+    border: black 1px solid;
+    background: white !important;
+    color: black !important;
+    margin-right: 10px;
+  }
+  .EditListingModal #ion-react-wrapper .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dfdfdf;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .EditListingModal #ion-react-wrapper .closeButton img {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 5px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: white;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter .disabled {
+    opacity: 0.1;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter .save_edit {
+    min-height: 25px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 6px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: white;
+    background: linear-gradient(to right, #FF0606 0%, #FF0681 100%);
+    --background: transparent !important;
+    --padding-start: 15px !important;
+    --padding-end: 15px !important;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    cursor: pointer;
+  }
+  .EditListingModal #ion-react-wrapper .editListingFooter .save_edit::part(native) {
+    --border-radius: 7px !important;
+    --box-shadow: none !important;
+    /* background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%); */
+  }
+  .EditListingModal #ion-react-wrapper ion-content {
+    --overflow-y: auto;
+    --background: white;
+    height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title {
+    margin-bottom: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 20%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .header_text {
+    display: flex;
+    align-items: flex-end;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .header_text img {
+    height: 30px;
+    width: auto;
+    margin-right: 5px;
+    margin-bottom: -1px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .header_text span {
+    font-size: 25px;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    color: #000000;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .setup_title .sub_text {
+    color: black;
+    font-size: 15px;
+    margin: 0 0 10px !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box {
+    box-sizing: border-box;
+    padding: 15px 20px 0;
+    color: black;
+    height: 80%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form ion-item {
+    min-height: 50px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .illustration_wrapper {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .illustration_wrapper .illustration {
+    height: 100px;
+    margin-right: 10px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .illustration_wrapper .illustration_details {
+    font-size: 12px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .title {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .description {
+    font-size: 10px;
+    font-style: italic;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select {
+    --background: white !important;
+    border-radius: 15px;
+    --border-radius: 15px;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    border: 1px solid black;
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .sub_category_select::part(native) {
+    --min-height: 50px !important;
+    --max-width: 200px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form select {
+    --background: transparent!important;
+    background: transparent !important;
+    border: none;
+    color: grey;
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    --highlight-color-focused: rgba(0, 0, 0, 0);
+    --min-height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form {
+    --background: white !important;
+    border-radius: 15px;
+    --border-radius: 15px;
+    border: 1px solid black;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .form::part(native) {
+    --min-height: 100% !important;
+    --height: 100% !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .textarea {
+    min-height: 200px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .textarea .textarea-wrapper {
+    height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .textarea .textarea-wrapper textarea {
+    height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .textarea ion-texarea {
+    height: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .textarea ion-texarea .textarea-wrapper {
+    height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .textarea ion-texarea .textarea-wrapper textarea {
+    height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .group_title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    display: grid;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .active .check {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0px;
+    width: auto;
+    -webkit-animation: check_animate_amenity 0.1s ease-in-out;
+            animation: check_animate_amenity 0.1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes check_animate_amenity {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 20px;
+    }
+  }
+  @keyframes check_animate_amenity {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 20px;
+    }
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #1BD2B2;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box {
+    aspect-ratio: 1/1;
+    background-color: white;
+    color: #fff;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.1s ease-in-out;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box .icon {
+    width: 40%;
+    margin-bottom: 15px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box span {
+    color: black;
+    font-size: 11px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    height: 25%;
+    text-align: center;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box:hover {
+    transform: scale(1.05);
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box .cat_title_box {
+    background: #D9D9D9;
+    box-shadow: 0px 0px 26px -5px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 1px 5px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: -15px 0 0 5px;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .amenity_option_wrapper .option_row .amenity_grid .option_box .cat_title_box img {
+    height: 30px;
+    width: auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .upload_title {
+    font-size: 12px;
+    margin: 12px 0 12px;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .upload_title .image_counter {
+    margin-left: 5px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box section {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box section p {
+    border: 1px dashed black;
+    border-radius: 10px;
+    color: black;
+    box-sizing: border-box;
+    padding: 60px 40px;
+    margin: 0;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view {
+    position: relative;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view .close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e7e7e7;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view .close img {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .upload_drop_box .image_upload_wrapper .image_upload_view .images {
+    border-radius: 10px;
+    margin: 5px;
+    height: 60px;
+    width: auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .map {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 300px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .grid .input {
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .full-width {
+    grid-template-columns: 1fr !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row span {
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input {
+    --background: white !important;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .input::part(native) {
+    --min-height: 50px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select {
+    --background: white !important;
+    border-radius: 15px;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    border: 1px solid black;
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row .itemDetails_select::part(native) {
+    --min-height: 50px !important;
+    --max-width: 200px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .itemDetails_option_wrapper .row select {
+    --background: transparent!important;
+    background: transparent !important;
+    border: none;
+    color: grey;
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    --highlight-color-focused: rgba(0, 0, 0, 0);
+    --min-height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 8px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .grid .grid_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .grid .input {
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .full-width {
+    grid-template-columns: 1fr !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row {
+    width: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row span {
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .small_text {
+    color: #464646;
+    font-style: italic;
+    font-size: 11px;
+    max-width: 300px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input {
+    --background: white !important;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    width: 100% !important;
+    font-size: 20px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input .symbol {
+    font-weight: 500;
+    box-sizing: border-box;
+    padding-right: 5px;
+    font-size: 22px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .input::part(native) {
+    --min-height: 50px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select {
+    --background: white !important;
+    border-radius: 15px;
+    color: rgb(72, 72, 72);
+    margin: 4px 0;
+    position: relative;
+    border: 1px solid black;
+    width: 100% !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select ion-label {
+    color: grey;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row .itemDetails_select::part(native) {
+    --min-height: 50px !important;
+    --max-width: 200px !important;
+    --color: black;
+    color: black;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .pricing_wrapper .row select {
+    --background: transparent!important;
+    background: transparent !important;
+    border: none;
+    color: grey;
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    --highlight-color-focused: rgba(0, 0, 0, 0);
+    --min-height: 100%;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .warning {
+    font-size: 12px;
+    color: rgb(255, 52, 52);
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .inactive {
+    opacity: 0.4;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .inactive .checkbox {
+    cursor: not-allowed !important;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .green {
+    border: 2px solid #126440;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .green .check {
+    background: #13ab69;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .orange {
+    border: 2px solid #964905;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .orange .check {
+    background: #d66809;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .red {
+    border: 2px solid #641212;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .red .check {
+    background: #b60f0f;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox:hover {
+    background-color: #dfdfdf;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox .check {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .checkbox_wrapper .checkbox .check img {
+    height: 17px;
+    width: auto;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .listing_info {
+    width: calc(100% - 60px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .listing_info .title {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .EditListingModal #ion-react-wrapper ion-content .listing_edit_box .edit_form .active_listing_wrapper .active_listing_box .listing_info .description {
+    font-size: 14px;
+    color: grey;
+  }
+}/*# sourceMappingURL=EditListingModal.css.map */

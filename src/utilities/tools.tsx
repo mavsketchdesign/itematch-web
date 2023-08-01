@@ -64,9 +64,32 @@ export const date_converter = (date:any) => {
   return new Date(date);
 }
 
+export const date_valid_formatter = (date:Date) => {
+  const currenDate = new Date(date);
+
+  var day = currenDate.getDate();
+  // var tempday = day<10 ? `0${day}`:  day;
+  var tempday = day;
+  // 23
+  
+  var month = currenDate.getMonth() + 1; // month is 0 as january and 11 as december so plus 1 to get actual month;
+  // var tempmonth = month<10 ? `0${month}`:  month;
+  var tempmonth = month;
+  // 8
+
+  var year = currenDate.getFullYear();
+  // 2022
+
+  // format is "2014-01-29"
+  const newDate = year + "-" + tempmonth + "-" + tempday;
+
+  return date !==null ? newDate : date;
+}
+
+
 export const onlyNumbers = (e:any) => {
   // setSignup({...signup, mobile: e.detail.value!.replace(/\D/g, '')});
-  return e.detail.value!.replace(/\D/g, '');
+  return e.detail ?  e.detail.value!.replace(/\D/g, '') : e.target.value.replace(/\D/g, '') ;
 };
 
 export const ValidateEmail = (input:any) => {
@@ -89,7 +112,7 @@ export const ValidateEmail = (input:any) => {
 };
 
 export const PasswordValidator = (inputtxt:any) => { 
-  var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+  var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
   if(inputtxt.match(passw)) 
   { 
       // alert('Correct, try another...')
@@ -137,6 +160,27 @@ export const LetterCount = (text:any) => {
   return final_text;
 }
 
+export const PasswordPreview = (type:any, setType:any) => {
+  type === "password" ? setType("text") : setType("password");
+}
 
+// Convert a Base64-encoded string to a File object
+export function base64StringtoFile (base64String:any, filename:any) {
+  var arr = base64String.split(','), mime = arr[0].match(/:(.*?);/)[1],
+    bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n)
+  while (n--) {
+    u8arr[n] = bstr.charCodeAt(n)
+  }
+  return new File([u8arr], filename, {type: mime})
+}
+
+// Extract an Base64 Image's File Extension
+export function extractImageFileExtensionFromBase64 (base64Data:any) {
+  return base64Data.substring('data:image/'.length, base64Data.indexOf(';base64'))
+}
+
+export function truncate (source:any, size:any) {
+  return source.length > size ? source.slice(0, size - 1) + "…" : source;
+}
 
 

@@ -14,7 +14,13 @@ import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle} from 'ionicons/icons';
 import Home from './pages/Home';
 import Join from './pages/Join';
+import ForgotPassword from './components/ForgotPassword';
 import CreateListing from './pages/CreateListing';
+import ManageItem from './pages/ManageItem';
+import ItemInfo from './pages/ItemInfo';
+import NotFound from './components/NotFound';
+import ItemDetails from './pages/ItemDetails';
+import Profile from './pages/Profile';
 import { Provider } from "react-redux";
 import store from "./store";
 import * as rdd from 'react-device-detect';
@@ -64,10 +70,26 @@ const App: React.FC = () => {
               <Route exact path="/">
                 <Join />
               </Route>
-              <Route exact path="/CreateListing">
+              <Route exact path="/CreateListing/">
                 <CreateListing />
               </Route>
-              
+              <Route exact path="/ManageItem/">
+                <ManageItem />
+              </Route>
+              <Route exact path="/ManageItem/Items/">
+                <ItemInfo />
+              </Route>
+              <Route exact path="/ManageItem/profile/">
+                <NotFound 
+                  icon = {"not_found.png"}
+                  message = "Sorry, seems like what you are searching for is not found!"
+                />
+              </Route>
+              <Route path="/ManageItem/Items/:id" component={ItemDetails}></Route>
+              <Route path="/ManageItem/profile/:id" component={Profile}></Route>
+              <Route exact path="/ForgotPassword/">
+                <ForgotPassword />
+              </Route>
             </IonRouterOutlet>
             
           {/* </IonTabs> */}

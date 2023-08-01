@@ -3,3 +3,6 @@ export const USER_INFO = "USER_INFO";
 export const USER_MY_INFO = "USER_MY_INFO";
 export const USER_SIGNIN = "USER_SIGNIN";
 export const USER_SIGNUP = "USER_SIGNUP";
+export const FETCH_LISTINGS = "FETCH_LISTINGS";
+export const FETCH_SPECIFIC_LISTING = "FETCH_SPECIFIC_LISTING";
+export const FETCH_USER_LIST_INFO = "FETCH_USER_LIST_INFO";

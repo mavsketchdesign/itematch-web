@@ -84,8 +84,8 @@ const FinalStep: React.FC<any> = ({signup, setSignup, setStep, otpNum}) => {
 
                                 <IonItem lines="none" className="form">
                                     <div className="required">{error?.dob}</div>
-                                    <IonLabel position="floating">Date of Birth</IonLabel>
-                                    <IonInput type="date" value={signup?.dob} placeholder="Date of Birth" onIonChange={ (e) => { setSignup({ ...signup, dob: e.detail.value! }) } } name="startDate"></IonInput>
+                                    <IonInput type="date" value={signup?.dob?.split("T")[0]} placeholder="Date of Birth" onIonChange={ (e) => { setSignup({ ...signup, dob: e.detail.value! }) } } name="Birthdate"></IonInput>
+                                    {/* <input className="inputText" value={signup?.dob} onChange={ (e) => { setSignup({ ...signup, dob: e.target.value }) } } type="date" name="Birthdate" placeholder="Date of Birth" /> */}
                                 </IonItem>
                                 
                             </div>

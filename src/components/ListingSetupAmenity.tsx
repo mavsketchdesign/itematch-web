@@ -15,14 +15,6 @@ const ListingAmenity: React.FC<any> = ({itemCategory, createListing, setCreateLi
     const [loading, setLoading] = useState(false);
     const [viewModal, setViewModal] = useState({isOpen: false})
     
-    useEffect(() => {
-        if(step == "amenity")
-        {
-            // console.log("itemsList", itemCategory)
-            console.log("createList", createListing)
-        }
-        
-      }, [createListing]);
     const amenitySelector = (title:any, group:any) => {
         
         if(createListing?.amenity.filter((data:any)=>data.title == title).length<1) {
@@ -32,7 +24,6 @@ const ListingAmenity: React.FC<any> = ({itemCategory, createListing, setCreateLi
                 amenity:[
                     ...createListing.amenity, {
                         title: title,
-                        description: "",
                         amenity_group: group,
                     }
                 ]})

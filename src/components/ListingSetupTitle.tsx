@@ -21,7 +21,7 @@ const ListingTitle: React.FC<any> = ({itemCategory, createListing, setCreateList
                 <div className="setupTitle_wrapper">
                   <div className="setupTitle_inner_wrapper">
 
-                    <div className="setup_title margin-bottom-30">
+                    <div className="setup_title">
                         <div className="header_text">
                             <img src="assets/Logo/itematching.png" alt="" />
                             <span>Setup</span>

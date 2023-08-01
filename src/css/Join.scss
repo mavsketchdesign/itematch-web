@@ -1,3 +1,13 @@
+
+.loading-wrapper {
+    border-radius: 15px !important;
+}
+
+sc-ion-loading-md svg {
+    --spinner-color: #af0935 !important;
+    --color: #af0935 !important;
+}
+
 .join {
     background-position: left;
     background-size: cover;
@@ -25,7 +35,7 @@
         justify-content: center;
 
         .verification {
-            max-height: 500px !important;
+            max-height: 600px !important;
         }
         .welcome {
             min-height: 350px !important;
@@ -36,7 +46,7 @@
             width: 500px;
             height: 90%;
             min-height: 500px;
-            max-height: 700px;
+            max-height: 600px;
             background: white;
             border-radius: 20px;
             background: rgba(255, 255, 255, 0.45);
@@ -80,6 +90,20 @@
                         grid-template-columns: 1fr 1fr;
                         grid-gap: 8px;
 
+                        .viewPassword {
+                            position: absolute;
+                            top: 50%;
+                            right: 10px;
+                            transform: translateY(-50%);
+                            z-index: 111;
+                            cursor: pointer;
+
+                            .passwordEye {
+                                height: 25px;
+                                cursor: pointer;
+                            }
+                        }
+
                         .otp-message {
                             font-size: 14px;
                             color: red;
@@ -107,6 +131,7 @@
                                 font-weight: bold;
                                 font-size: 20px;
                                 margin: 0 20px;
+                                padding: 0 !important;
 
                                 &:focus{
                                     outline: white;
@@ -122,6 +147,14 @@
                             margin: 4px 0;
                             position: relative;
 
+                            --min-height: 50px !important;
+                            --max-height: 50px !important;
+                            --padding-start: 0px;
+                            --inner-padding-end: 0px;
+                            height: 50px;
+                            --border-radius: 15px;
+                            font-size: 12px;
+
                             .native-input[type=date]::-webkit-calendar-picker-indicator {
                                 filter: invert(1);
                                 color: black;
@@ -135,6 +168,10 @@
                                 color: red;
                             }
 
+                            .req_pass {
+                                right: 40px !important;
+                            }
+
                             ion-label {
                                 color: grey;
                                 // font-size: 12px;
@@ -144,6 +181,18 @@
                                 --color: black;
                                 color: black;
                             }
+                        }
+                        input, .inputText {
+                            background: transparent;
+                            border: none !important;
+                            border-radius: 8px !important;
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 16px;
+                            font-size: 16px;
+                            color: black !important;
+                            font-family: Arial, Helvetica, sans-serif;
+                            // --highlight-color-focused: rgba(0, 0, 0, 0);
                         }
                         select {
                             --background: transparent!important;
@@ -185,6 +234,106 @@
                         ion-spinner {
                             margin-right: 10px;
                         }
+
+                        // Facebook Button
+                        #FBsignInButton {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px !important;
+                            background: linear-gradient(to right, #0997FF 0%, #0679cb 100%) !important;
+                            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                            height: 40px !important;
+                            margin: 4px auto;
+                            cursor: pointer;
+
+                            div:first-child {
+                                height: 40px !important;
+                                box-shadow: none !important;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                            }
+                            img {
+                                width: 23px;
+                                margin-right: 10px;
+                                border-radius: 5px;
+                            }
+                            
+
+                            button {
+                                background: none !important;
+                                background-color: transparent !important;
+                                width: 100% !important;
+                                font-size: 10px !important;
+                                font-family: Arial, Helvetica, sans-serif !important;
+                                letter-spacing: 5px;
+                                color: white !important;
+                                border: none !important;
+                                padding: 0 10px !important;
+                                font-weight: lighter;
+                                margin: 0 !important;
+                                height: 40px !important;
+                                box-shadow: none !important;
+
+                                svg {
+                                    margin: auto 5px auto 0 !important;
+                                }
+
+                                div:first-child {
+                                    height: 40px !important;
+                                    width: 100% !important;
+                                    box-shadow: none !important;
+                                }
+                            }
+                        }
+
+                        // Google button
+                        #signInButton {
+                            margin: 4px auto;
+                            background: linear-gradient(to right, #ffffff 0%, #e8e8e8 100%) !important;
+                            border-radius: 10px;
+
+                            button {
+                                height: 40px;
+                                width: 100%;
+                                background: none;
+                                border-radius: 10px !important;
+                                font-family: Arial, Helvetica, sans-serif !important;
+                                letter-spacing: 5px;
+                                color: black !important;
+                                font-size: 10px !important;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: transparent !important;
+
+                                div {
+                                    padding: 0 !important;
+
+                                    margin: auto 0;
+                                }
+                                span {
+                                    padding-right: 0 !important;
+                                }
+                            }
+                        }
+
+                        // Apple Button
+                        #AppleSignin {
+                            margin: 4px auto;
+                            #appleid-signin {
+                                background: linear-gradient(to right, #505050 0%, #312f2f 100%) !important;
+                                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                                border-radius: 10px;
+                                div {
+                                    height: 40px !important;
+                                    border-radius: 50px !important;
+                                }
+                            }
+                        }
+
                         .submit {
                             min-height: 50px;
                             /* min-width: 350px; */
@@ -327,7 +476,7 @@
         justify-content: center;
 
         .verification {
-            max-height: 500px !important;
+            max-height: 550px !important;
         }
         .welcome {
             min-height: 350px !important;
@@ -338,7 +487,7 @@
             width: 500px;
             height: 90%;
             min-height: 500px;
-            max-height: 700px;
+            max-height: 600px;
             background: white;
             border-radius: 20px;
             background: rgba(255, 255, 255, 0.45);
@@ -353,8 +502,15 @@
             align-items: center;
             color: black;
 
+            .sm-align-top {
+                align-items: flex-start !important;
+            }
+            .sm-justify-top {
+                justify-content: flex-start !important;
+            }
+
             .inner-wrapper {
-                
+                overflow-y: auto;
                 width: 100%;
 
                 .logo {
@@ -381,6 +537,20 @@
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         grid-gap: 8px;
+
+                        .viewPassword {
+                            position: absolute;
+                            top: 50%;
+                            right: 10px;
+                            transform: translateY(-50%);
+                            z-index: 111;
+                            cursor: pointer;
+
+                            .passwordEye {
+                                height: 25px;
+                                cursor: pointer;
+                            }
+                        }
 
                         .otp-message {
                             font-size: 14px;
@@ -409,6 +579,7 @@
                                 font-weight: bold;
                                 font-size: 20px;
                                 margin: 0 20px;
+                                padding: 0 !important;
 
                                 &:focus{
                                     outline: white;
@@ -419,9 +590,17 @@
 
                         .form {
                             --background: white !important;
-                            border-radius: 15px;
+
+                            --min-height: 50px !important;
+                            --max-height: 50px !important;
+                            --padding-start: 0px;
+                            --inner-padding-end: 0px;
+                            height: 50px;
+                            border-radius: 8px;
+                            --border-radius: 8px;
                             color: rgb(72, 72, 72);
                             margin: 4px 0;
+                            font-size: 12px;
                             position: relative;
 
                             .required {
@@ -441,6 +620,18 @@
                                 --color: grey;
                                 color: grey;
                             }
+                        }
+                        input, .inputText {
+                            background: transparent;
+                            border: none !important;
+                            border-radius: 8px !important;
+                            width: 100%;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 16px;
+                            height: 100%;
+                            padding: 0 16px;
+                            color: black !important;
+                            // --highlight-color-focused: rgba(0, 0, 0, 0);
                         }
                         select {
                             --background: transparent!important;
@@ -477,6 +668,105 @@
 
                         a {
                             text-decoration: none !important;
+                        }
+
+                        // Facebook Button
+                        #FBsignInButton {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px !important;
+                            background: linear-gradient(to right, #0997FF 0%, #0679cb 100%) !important;
+                            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                            height: 40px !important;
+                            margin: 4px auto;
+                            cursor: pointer;
+
+                            div:first-child {
+                                height: 40px !important;
+                                box-shadow: none !important;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                            }
+                            img {
+                                width: 23px;
+                                margin-right: 10px;
+                                border-radius: 5px;
+                            }
+                            
+
+                            button {
+                                background: none !important;
+                                background-color: transparent !important;
+                                width: 100% !important;
+                                font-size: 10px !important;
+                                font-family: Arial, Helvetica, sans-serif !important;
+                                letter-spacing: 5px;
+                                color: white !important;
+                                border: none !important;
+                                padding: 0 10px !important;
+                                font-weight: lighter;
+                                margin: 0 !important;
+                                height: 40px !important;
+                                box-shadow: none !important;
+
+                                svg {
+                                    margin: auto 5px auto 0 !important;
+                                }
+
+                                div:first-child {
+                                    height: 40px !important;
+                                    width: 100% !important;
+                                    box-shadow: none !important;
+                                }
+                            }
+                        }
+
+                        // Google button
+                        #signInButton {
+                            margin: 4px auto;
+                            background: linear-gradient(to right, #ffffff 0%, #e8e8e8 100%) !important;
+                            border-radius: 10px;
+
+                            button {
+                                height: 40px;
+                                width: 100%;
+                                background: none;
+                                border-radius: 10px !important;
+                                font-family: Arial, Helvetica, sans-serif !important;
+                                letter-spacing: 5px;
+                                color: black !important;
+                                font-size: 10px !important;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: transparent !important;
+
+                                div {
+                                    padding: 0 !important;
+
+                                    margin: auto 0;
+                                }
+                                span {
+                                    padding-right: 0 !important;
+                                }
+                            }
+                        }
+
+                        // Apple Button
+                        #AppleSignin {
+                            margin: 4px auto;
+                            #appleid-signin {
+                                background: linear-gradient(to right, #505050 0%, #312f2f 100%) !important;
+                                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                                border-radius: 10px;
+                                div {
+                                    height: 40px !important;
+                                    border-radius: 50px !important;
+                                }
+                            }
                         }
                         
                         .submit {
@@ -623,6 +913,7 @@
         align-items: center;
         justify-content: center;
 
+
         .join-card {
             width:100%;
             height: 100%;
@@ -641,9 +932,21 @@
             align-items: center;
             color: black;
 
+            .sm-align-top {
+                align-items: flex-start !important;
+            }
+            .sm-justify-top {
+                // justify-content: flex-start !important;
+            }
+
             .inner-wrapper {
-                
+                overflow-y: auto;
                 width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
 
                 .logo {
                     width: 65px;
@@ -669,6 +972,20 @@
                         display: grid;
                         grid-template-columns: 1fr !important;
                         grid-column-gap: 8px;
+
+                        .viewPassword {
+                            position: absolute;
+                            top: 50%;
+                            right: 10px;
+                            transform: translateY(-50%);
+                            z-index: 111;
+                            cursor: pointer;
+
+                            .passwordEye {
+                                height: 25px;
+                                cursor: pointer;
+                            }
+                        }
 
                         .otp-message {
                             font-size: 14px;
@@ -703,7 +1020,8 @@
                                 color: rgb(72, 72, 72);
                                 font-weight: bold;
                                 font-size: 20px;
-                                margin: 0 20px;
+                                margin: 0 auto;
+                                padding: 0 !important;
 
                                 &:focus{
                                     outline: white;
@@ -714,10 +1032,13 @@
 
                         .form {
                             --background: white !important;
-                            --min-height: 40px !important;
-                            --max-height: 40px !important;
-                            height: 40px;
+                            --min-height: 50px !important;
+                            --max-height: 50px !important;
+                            --padding-start: 0px;
+                            --inner-padding-end: 0px;
+                            height: 50px;
                             border-radius: 8px;
+                            --border-radius: 8px;
                             color: rgb(72, 72, 72);
                             margin: 4px 0;
                             font-size: 12px;
@@ -747,12 +1068,25 @@
                                 color: black;
                             }
                         }
+                        input, .inputText {
+                            background: transparent;
+                            border: none !important;
+                            border-radius: 8px !important;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 16px;
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 16px;
+                            color: black !important;
+                            // --highlight-color-focused: rgba(0, 0, 0, 0);
+                        }
                         select {
                             --background: transparent!important;
                             background: transparent!important;
                             border: none;
                             color: grey;
                             font-size: 12px;
+                            padding: 0 16px;
                             height: 100%;
                             width: 100%;
                             --highlight-color-focused: rgba(0, 0, 0, 0);
@@ -785,6 +1119,108 @@
 
                         a {
                             text-decoration: none !important;
+                        }
+
+                        // Facebook Button
+                        #FBsignInButton {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px !important;
+                            background: linear-gradient(to right, #0997FF 0%, #0679cb 100%) !important;
+                            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                            height: 40px !important;
+                            margin: 4px auto;
+                            cursor: pointer;
+
+                            div:first-child {
+                                height: 40px !important;
+                                box-shadow: none !important;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                            }
+                            img {
+                                width: 23px;
+                                margin-right: 10px;
+                                border-radius: 5px;
+                            }
+                            
+
+                            button {
+                                background: none !important;
+                                background-color: transparent !important;
+                                width: 100% !important;
+                                font-size: 10px !important;
+                                font-family: Arial, Helvetica, sans-serif !important;
+                                letter-spacing: 5px;
+                                color: white !important;
+                                border: none !important;
+                                padding: 0 10px !important;
+                                font-weight: lighter;
+                                margin: 0 !important;
+                                height: 40px !important;
+                                box-shadow: none !important;
+                                display: flex;
+                                justify-content: center;
+
+                                svg {
+                                    margin: auto 5px auto 0 !important;
+                                }
+
+                                div:first-child {
+                                    height: 40px !important;
+                                    width: fit-content !important;
+                                    box-shadow: none !important;
+                                }
+                            }
+                        }
+
+                        // Google button
+                        #signInButton {
+                            margin: 4px auto;
+                            background: linear-gradient(to right, #ffffff 0%, #e8e8e8 100%) !important;
+                            border-radius: 10px;
+
+                            button {
+                                height: 40px;
+                                width: 100%;
+                                background: none;
+                                border-radius: 10px !important;
+                                font-family: Arial, Helvetica, sans-serif !important;
+                                letter-spacing: 5px;
+                                color: black !important;
+                                font-size: 10px !important;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: transparent !important;
+
+                                div {
+                                    padding: 0 !important;
+
+                                    margin: auto 0;
+                                }
+                                span {
+                                    padding-right: 0 !important;
+                                }
+                            }
+                        }
+
+                        // Apple Button
+                        #AppleSignin {
+                            margin: 4px auto;
+                            #appleid-signin {
+                                background: linear-gradient(to right, #505050 0%, #312f2f 100%) !important;
+                                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                                border-radius: 10px;
+                                div {
+                                    min-width: 100% !important;
+                                    height: 40px !important;
+                                    border-radius: 50px !important;
+                                }
+                            }
                         }
                         
                         .submit {
@@ -931,6 +1367,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 100%;
+        overflow: hidden;
 
         .join-card {
             width:100%;
@@ -949,10 +1387,24 @@
             display: flex;
             align-items: center;
             color: black;
+            overflow: hidden;
+
+            .sm-align-top {
+                align-items: flex-start !important;
+            }
+            .sm-justify-top {
+                // justify-content: flex-start !important;
+            }
 
             .inner-wrapper {
                 
+                overflow-y: auto;
                 width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
 
                 .logo {
                     width: 60px;
@@ -982,6 +1434,20 @@
                         display: grid;
                         grid-template-columns: 1fr !important;
                         grid-column-gap: 8px;
+
+                        .viewPassword {
+                            position: absolute;
+                            top: 50%;
+                            right: 10px;
+                            transform: translateY(-50%);
+                            z-index: 111;
+                            cursor: pointer;
+
+                            .passwordEye {
+                                height: 25px;
+                                cursor: pointer;
+                            }
+                        }
 
                         .otp-message {
                             font-size: 14px;
@@ -1016,7 +1482,8 @@
                                 color: rgb(72, 72, 72);
                                 font-weight: bold;
                                 font-size: 20px;
-                                margin: 0 20px;
+                                margin: 0 auto;
+                                padding: 0 !important;
 
                                 &:focus{
                                     outline: white;
@@ -1027,10 +1494,16 @@
 
                         .form {
                             --background: white !important;
-                            --min-height: 40px !important;
-                            --max-height: 40px !important;
-                            height: 40px;
+                            --min-height: 50px !important;
+                            --max-height: 50px !important;
+                            background: white !important;
+                            min-height: 50px !important;
+                            max-height: 50px !important;
+                            --padding-start: 0px;
+                            --inner-padding-end: 0px;
+                            height: 50px;
                             border-radius: 8px;
+                            --border-radius: 8px;
                             color: rgb(72, 72, 72);
                             margin: 4px 0;
                             font-size: 12px;
@@ -1060,6 +1533,16 @@
                                 color: black;
                             }
                         }
+                        input, .inputText {
+                            background: transparent;
+                            border: none !important;
+                            border-radius: 8px !important;
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 16px;
+                            color: black !important;
+                            // --highlight-color-focused: rgba(0, 0, 0, 0);
+                        }
                         select {
                             --background: transparent!important;
                             background: transparent!important;
@@ -1070,6 +1553,16 @@
                             width: 100%;
                             --highlight-color-focused: rgba(0, 0, 0, 0);
                             --min-height: 100%;
+                            padding: 0 5px 0 10px;
+                        }
+                        input, .inputText {
+                            background: transparent;
+                            border: none !important;
+                            width: 100%;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 16px;
+                            height: 100%;
+                            --highlight-color-focused: rgba(0, 0, 0, 0);
                         }
                         .small-text {
                             font-size: 8px;
@@ -1098,6 +1591,108 @@
 
                         a {
                             text-decoration: none !important;
+                        }
+
+                        // Facebook Button
+                        #FBsignInButton {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px !important;
+                            background: linear-gradient(to right, #0997FF 0%, #0679cb 100%) !important;
+                            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                            height: 40px !important;
+                            margin: 4px auto;
+                            cursor: pointer;
+
+                            div:first-child {
+                                height: 40px !important;
+                                box-shadow: none !important;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                            }
+                            img {
+                                width: 23px;
+                                margin-right: 10px;
+                                border-radius: 5px;
+                            }
+                            
+
+                            button {
+                                background: none !important;
+                                background-color: transparent !important;
+                                width: 100% !important;
+                                font-size: 10px !important;
+                                font-family: Arial, Helvetica, sans-serif !important;
+                                letter-spacing: 5px;
+                                color: white !important;
+                                border: none !important;
+                                padding: 0 10px !important;
+                                font-weight: lighter;
+                                margin: 0 !important;
+                                height: 40px !important;
+                                box-shadow: none !important;
+                                display: flex;
+                                justify-content: center;
+
+                                svg {
+                                    margin: auto 5px auto 0 !important;
+                                }
+
+                                div:first-child {
+                                    height: 40px !important;
+                                    width: fit-content !important;
+                                    box-shadow: none !important;
+                                }
+                            }
+                        }
+
+                        // Google button
+                        #signInButton {
+                            margin: 4px auto;
+                            background: linear-gradient(to right, #ffffff 0%, #e8e8e8 100%) !important;
+                            border-radius: 10px;
+
+                            button {
+                                height: 40px;
+                                width: 100%;
+                                background: none;
+                                border-radius: 10px !important;
+                                font-family: Arial, Helvetica, sans-serif !important;
+                                letter-spacing: 5px;
+                                color: black !important;
+                                font-size: 10px !important;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: transparent !important;
+
+                                div {
+                                    padding: 0 !important;
+
+                                    margin: auto 0;
+                                }
+                                span {
+                                    padding-right: 0 !important;
+                                }
+                            }
+                        }
+
+                        // Apple Button
+                        #AppleSignin {
+                            margin: 4px auto;
+                            #appleid-signin {
+                                background: linear-gradient(to right, #505050 0%, #312f2f 100%) !important;
+                                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                                border-radius: 10px;
+                                div {
+                                    height: 40px !important;
+                                    border-radius: 50px !important;
+                                    min-width: 100% !important;
+                                }
+                            }
                         }
                         
                         .submit {

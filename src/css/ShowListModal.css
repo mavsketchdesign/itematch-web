@@ -1,146 +1,445 @@
-.ListingModal {
-  --width: 80%;
-  --height: 90%;
+@media only screen and (min-width: 992px) {
+  .ListingModal {
+    --width: 80%;
+    --height: 90%;
+  }
+  .ListingModal::part(content) {
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 10px solid #626262;
+  }
+  .ListingModal::part(backdrop) {
+    opacity: 0.5;
+    --backdrop-opacity: 0.5;
+  }
+  .ListingModal #ion-react-wrapper {
+    background: white;
+    position: relative;
+    border-radius: 30px;
+  }
+  .ListingModal #ion-react-wrapper .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dfdfdf;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .ListingModal #ion-react-wrapper .closeButton img {
+    width: 100%;
+  }
+  .ListingModal #ion-react-wrapper .search_filter {
+    --background: #ebebeb !important;
+    color: rgb(72, 72, 72);
+    position: relative;
+  }
+  .ListingModal #ion-react-wrapper .search_filter .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .ListingModal #ion-react-wrapper .search_filter .required {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 10px;
+    color: red;
+  }
+  .ListingModal #ion-react-wrapper .search_filter ion-label {
+    color: grey;
+  }
+  .ListingModal #ion-react-wrapper .search_filter::part(native) {
+    --min-height: 100% !important;
+    --color: black;
+    color: black;
+  }
+  .ListingModal #ion-react-wrapper ion-content {
+    --overflow-y: auto;
+    --background: white;
+    height: 100%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title {
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .header_text {
+    display: flex;
+    align-items: flex-end;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .header_text img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .header_text span {
+    font-size: 40px;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    color: #000000;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .sub_text {
+    color: black;
+    font-size: 18px;
+    margin: 0 0 10px !important;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box {
+    box-sizing: border-box;
+    padding: 10px;
+    color: black;
+    --overflow: auto;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper {
+    margin: 0 0 20px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box {
+    display: flex;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .num {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+    text-align: right;
+    width: 5%;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat {
+    width: 95%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box {
+    margin: 0 0 10px;
+    display: flex;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title {
+    display: flex;
+    margin-right: 10px;
+    width: 20%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title .sub_cat_num {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: right;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title .sub_title {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_description {
+    width: 80%;
+    font-size: 15px;
+  }
 }
-.ListingModal::part(content) {
-  border-radius: 30px;
-  box-sizing: border-box;
-  border: 10px solid #626262;
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+  .ListingModal {
+    --width: 100%;
+    --height: 100%;
+  }
+  .ListingModal::part(content) {
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 10px solid #626262;
+  }
+  .ListingModal::part(backdrop) {
+    opacity: 0.5;
+    --backdrop-opacity: 0.5;
+  }
+  .ListingModal #ion-react-wrapper {
+    background: white;
+    position: relative;
+    border-radius: 30px;
+  }
+  .ListingModal #ion-react-wrapper .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dfdfdf;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .ListingModal #ion-react-wrapper .closeButton img {
+    width: 100%;
+  }
+  .ListingModal #ion-react-wrapper .search_filter {
+    --background: #ebebeb !important;
+    color: rgb(72, 72, 72);
+    position: relative;
+  }
+  .ListingModal #ion-react-wrapper .search_filter .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .ListingModal #ion-react-wrapper .search_filter .required {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 10px;
+    color: red;
+  }
+  .ListingModal #ion-react-wrapper .search_filter ion-label {
+    color: grey;
+  }
+  .ListingModal #ion-react-wrapper .search_filter::part(native) {
+    --min-height: 100% !important;
+    --color: black;
+    color: black;
+  }
+  .ListingModal #ion-react-wrapper ion-content {
+    --overflow-y: auto;
+    --background: white;
+    height: 100%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title {
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .header_text {
+    display: flex;
+    align-items: flex-end;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .header_text img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .header_text span {
+    font-size: 40px;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    color: #000000;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .sub_text {
+    color: black;
+    font-size: 18px;
+    margin: 0 0 10px !important;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box {
+    box-sizing: border-box;
+    padding: 10px;
+    color: black;
+    --overflow: auto;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper {
+    margin: 0 0 20px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box {
+    display: flex;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .num {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+    text-align: right;
+    width: 5%;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat {
+    width: 95%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .title {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box {
+    margin: 0 0 10px;
+    display: flex;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title {
+    display: flex;
+    margin-right: 5px;
+    width: 25%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title .sub_cat_num {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: right;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title .sub_title {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_description {
+    width: 75%;
+    font-size: 15px;
+  }
 }
-.ListingModal::part(backdrop) {
-  opacity: 0.5;
-  --backdrop-opacity: 0.5;
-}
-.ListingModal #ion-react-wrapper {
-  background: white;
-  position: relative;
-  border-radius: 30px;
-}
-.ListingModal #ion-react-wrapper .closeButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #dfdfdf;
-  box-sizing: border-box;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 11;
-}
-.ListingModal #ion-react-wrapper .closeButton img {
-  width: 100%;
-}
-.ListingModal #ion-react-wrapper .search_filter {
-  --background: #ebebeb !important;
-  color: rgb(72, 72, 72);
-  position: relative;
-}
-.ListingModal #ion-react-wrapper .search_filter .native-input[type=date]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-  color: black;
-}
-.ListingModal #ion-react-wrapper .search_filter .required {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 10px;
-  color: red;
-}
-.ListingModal #ion-react-wrapper .search_filter ion-label {
-  color: grey;
-}
-.ListingModal #ion-react-wrapper .search_filter::part(native) {
-  --min-height: 100% !important;
-  --color: black;
-  color: black;
-}
-.ListingModal #ion-react-wrapper ion-content {
-  --overflow-y: auto;
-  --background: white;
-  height: 100%;
-}
-.ListingModal #ion-react-wrapper ion-content .setup_title {
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  padding: 20px;
-}
-.ListingModal #ion-react-wrapper ion-content .setup_title .header_text {
-  display: flex;
-  align-items: flex-end;
-}
-.ListingModal #ion-react-wrapper ion-content .setup_title .header_text img {
-  height: 50px;
-  width: auto;
-  margin-right: 10px;
-}
-.ListingModal #ion-react-wrapper ion-content .setup_title .header_text span {
-  font-size: 40px;
-  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-  color: #000000;
-}
-.ListingModal #ion-react-wrapper ion-content .setup_title .sub_text {
-  color: black;
-  font-size: 18px;
-  margin: 0 0 10px !important;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box {
-  box-sizing: border-box;
-  padding: 10px;
-  color: black;
-  --overflow: auto;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper {
-  margin: 0 0 20px;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box {
-  display: flex;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .num {
-  font-size: 20px;
-  font-weight: bold;
-  margin-right: 15px;
-  text-align: right;
-  width: 5%;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bold;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat {
-  width: 95%;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .title {
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box {
-  margin: 0 0 10px;
-  display: flex;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title {
-  display: flex;
-  margin-right: 10px;
-  width: 20%;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title .sub_cat_num {
-  font-size: 15px;
-  font-weight: bold;
-  margin-right: 10px;
-  text-align: right;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title .sub_title {
-  font-size: 15px;
-  font-weight: bold;
-  text-align: left;
-  width: 100%;
-}
-.ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_description {
-  width: 80%;
-  font-size: 15px;
+@media only screen and (max-width: 601px) {
+  .ListingModal {
+    --width: 100%;
+    --height: 100%;
+  }
+  .ListingModal::part(content) {
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 10px solid #626262;
+  }
+  .ListingModal::part(backdrop) {
+    opacity: 0.5;
+    --backdrop-opacity: 0.5;
+  }
+  .ListingModal #ion-react-wrapper {
+    background: white;
+    position: relative;
+    border-radius: 30px;
+  }
+  .ListingModal #ion-react-wrapper .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dfdfdf;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .ListingModal #ion-react-wrapper .closeButton img {
+    width: 100%;
+  }
+  .ListingModal #ion-react-wrapper .search_filter {
+    --background: #ebebeb !important;
+    color: rgb(72, 72, 72);
+    position: relative;
+  }
+  .ListingModal #ion-react-wrapper .search_filter .native-input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: black;
+  }
+  .ListingModal #ion-react-wrapper .search_filter .required {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 10px;
+    color: red;
+  }
+  .ListingModal #ion-react-wrapper .search_filter ion-label {
+    color: grey;
+  }
+  .ListingModal #ion-react-wrapper .search_filter::part(native) {
+    --min-height: 100% !important;
+    --color: black;
+    color: black;
+  }
+  .ListingModal #ion-react-wrapper ion-content {
+    --overflow-y: auto;
+    --background: white;
+    height: 100%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title {
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .header_text {
+    display: flex;
+    align-items: flex-end;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .header_text img {
+    height: 35px;
+    width: auto;
+    margin-right: 10px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .header_text span {
+    font-size: 29px;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    color: #000000;
+  }
+  .ListingModal #ion-react-wrapper ion-content .setup_title .sub_text {
+    color: black;
+    font-size: 14px;
+    margin: 0 0 10px !important;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box {
+    box-sizing: border-box;
+    padding: 10px;
+    color: black;
+    --overflow: auto;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper {
+    margin: 0 0 20px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box {
+    display: flex;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .num {
+    font-weight: bold;
+    margin-right: 15px;
+    text-align: right;
+    width: 7%;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat {
+    width: 93%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .title {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box {
+    margin: 0 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title {
+    display: flex;
+    margin-right: 5px;
+    margin-left: -15px;
+    width: 100%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title .sub_cat_num {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: right;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_cat_title .sub_title {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+  }
+  .ListingModal #ion-react-wrapper ion-content .listing_guide_box .categories_wrapper .cat_box .inner_cat .sub_categories_wrapper .sub_cat_box .sub_description {
+    width: 100%;
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=ShowListModal.css.map */

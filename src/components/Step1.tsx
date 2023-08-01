@@ -1,16 +1,34 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, IonButton, IonAvatar, IonGrid, IonRow, IonCol, IonInput, IonSpinner } from '@ionic/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
 import { url } from 'inspector';
 import {onlyNumbers, ValidateEmail, PasswordValidator, MobileCleaner, MobileCombiner} from '../utilities/tools';
-import {initialRegister} from '../actions/UserAction';
+import {initialRegister, signinSocial} from '../actions/UserAction';
+import GoogleSignin from '../components/GoogleSignin';
+import FacebookSignin from '../components/FacebookSignin';
 import {useDispatch, useSelector} from 'react-redux';
+import { gapi } from 'gapi-script';
 
 
 
 const Step1: React.FC<any> = ({signup, setSignup, setStep}) => {
 
+
+    const clientId = "137532011617-7rlishcjnoa43vsndb2n66fr81t93fs8.apps.googleusercontent.com";
+
+    useEffect(()=>{
+        function start() {
+            gapi.client.init({
+                clientId: clientId,
+                scope: ""
+            })
+        };
+
+        gapi.load('client:auth2', start)
+    },[])
+
     const dispatch = useDispatch();
+    const [passwordtype, setPasswordType] = useState<boolean>(true);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<any>({ 
         first_name: "",
@@ -69,12 +87,25 @@ const Step1: React.FC<any> = ({signup, setSignup, setStep}) => {
         
 
     }
+
+    const passwordToggle = () => {
+        setPasswordType( passwordtype ? false : true );
+    }
+
+    const authSubmit = (token: any, social:any) => {
+        const data = {
+            token: token
+        }
+        dispatch(signinSocial(data, social, response));
+    }
+
       return (
             
             <>
                 <div className="join-card">
+                    
+                    <div className="inner-wrapper sm-justify-top">
                     <img className="coming-soon-poster-inner" src="assets/img/bg/coming soon.png" alt="" />
-                    <div className="inner-wrapper">
                         <img className="logo" src="assets/Logo/v1.png" alt="" />
 
                         <div className="title">SIGN UP</div>
@@ -88,13 +119,15 @@ const Step1: React.FC<any> = ({signup, setSignup, setStep}) => {
                             <div className="row">
                                 <IonItem lines="none" className="form">
                                     <div className="required">{error?.first_name}</div>
-                                    <IonLabel position="floating">First name</IonLabel>
-                                    <IonInput value={signup?.first_name} onIonChange={ (e) => { setSignup({ ...signup, first_name: e.detail.value! }) } } name="first_name" placeholder="First name"></IonInput>
+                                    {/* <IonLabel position="floating">First name</IonLabel>
+                                    <IonInput value={signup?.first_name} onIonChange={ (e) => { setSignup({ ...signup, first_name: e.detail.value! }) } } name="first_name" placeholder="First name"></IonInput> */}
+                                    <input className="inputText" value={signup?.first_name} onChange={ (e) => { setSignup({ ...signup, first_name: e.target.value }) } } type="text" name="first_name" placeholder="First Name" />
                                 </IonItem>
                                 <IonItem lines="none" className="form">
                                     <div className="required">{error?.last_name}</div>
-                                    <IonLabel position="floating">Last name</IonLabel>
-                                    <IonInput value={signup?.last_name} onIonChange={ (e) => { setSignup({ ...signup, last_name: e.detail.value! }) } } name="last_name" placeholder="Last name"></IonInput>
+                                    {/* <IonLabel position="floating">Last name</IonLabel> */}
+                                    {/* <IonInput value={signup?.last_name} onIonChange={ (e) => { setSignup({ ...signup, last_name: e.detail.value! }) } } name="last_name" placeholder="Last name"></IonInput> */}
+                                    <input className="inputText" value={signup?.last_name} onChange={ (e) => { setSignup({ ...signup, last_name: e.target.value }) } } type="text" name="Last Name" placeholder="Last Name" />
                                 </IonItem>
                             </div>
 
@@ -327,23 +360,29 @@ const Step1: React.FC<any> = ({signup, setSignup, setStep}) => {
                                 </IonItem>
                                 <IonItem lines="none" className="form">
                                     <div className="required">{error?.mobile}</div>
-                                    <IonLabel position="floating">Mobile</IonLabel>
-                                    <IonInput value={signup?.mobile} onIonChange={(e)=>{ setSignup({...signup, mobile: onlyNumbers(e), number: MobileCombiner(signup?.area, MobileCleaner(onlyNumbers(e))) });  }} name="mobile" type="tel" placeholder=" Mobile Number"></IonInput>
+                                    {/* <IonLabel position="floating">Mobile</IonLabel> */}
+                                    {/* <IonInput value={signup?.mobile} onIonChange={(e)=>{ setSignup({...signup, mobile: onlyNumbers(e), number: MobileCombiner(signup?.area, MobileCleaner(onlyNumbers(e))) });  }} name="mobile" type="tel" placeholder=" Mobile Number"></IonInput> */}
+                                    <input className="inputText" value={signup?.mobile} onChange={(e)=>{ setSignup({...signup, mobile: onlyNumbers(e), number: MobileCombiner(signup?.area, MobileCleaner(onlyNumbers(e)) ) });  }} type="tel" name="Mobile Number" placeholder="Mobile Number" />
                                 </IonItem>
                             </div>
-
+                            {/* e.target.value */}
                             <div className="row full-width">
                                 <IonItem lines="none" className="form">
                                     <div className="required">{error?.email}</div>
-                                    <IonLabel position="floating">Email address</IonLabel>
-                                    <IonInput value={signup?.email} onIonChange={ (e) => {setSignup({ ...signup, email: e.detail.value! })} } name="email" placeholder="Email address"></IonInput>
+                                    {/* <IonLabel position="floating">Email address</IonLabel> */}
+                                    {/* <IonInput value={signup?.email} onIonChange={ (e) => {setSignup({ ...signup, email: e.detail.value! })} } name="email" placeholder="Email address"></IonInput> */}
+                                    <input className="inputText" value={signup?.email} onChange={ (e) => {setSignup({ ...signup, email: e.target.value })} } type="email" name="Email" placeholder="Email Address" />
                                 </IonItem>
                             </div>
                             <div className="row full-width">
                                 <IonItem lines="none" className="form margin-bottom-0">
-                                    <div className="required">{error?.password}</div>
-                                    <IonLabel position="floating">Password</IonLabel>
-                                    <IonInput value={signup?.password} onIonChange={ (e) => {setSignup({ ...signup, password: e.detail.value! })} } type="password" name="password" placeholder="Password"></IonInput>
+                                    <div className="required req_pass">{error?.password}</div>
+                                    {/* <IonLabel position="floating">Password</IonLabel>
+                                    <IonInput value={signup?.password} onIonChange={ (e) => {setSignup({ ...signup, password: e.detail.value! })} } type={passwordtype ? "password" : "text"} name="password" placeholder="Password"></IonInput> */}
+                                    <input className="inputText" value={signup?.password} onChange={ (e) => {setSignup({ ...signup, password: e.target.value })} } type={passwordtype ? "password" : "text"} name="Password" placeholder="Password" />
+                                    <div className="viewPassword" onClick={()=>{ passwordToggle(); }}>
+                                        <img className="passwordEye" src={`assets/img/icons/${passwordtype ? "p-view.png" : "p-hide.png"}`} alt="" />
+                                    </div>
                                 </IonItem>
                                 <span className="small-text margin-bottom-10"><i>Password must contain atleast the following: 6 to 20 characters, one numeric, one uppercase, one lowercase</i></span>
                                 {/* 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter */}
@@ -365,23 +404,29 @@ const Step1: React.FC<any> = ({signup, setSignup, setStep}) => {
                                 }
                             </div>
 
-                            <div className="divider">
+                            {/* <div className="divider">
                                 <hr />
                                 <div className="text">OR CONTINUE WTIH:</div>
                                 <hr />
-                            </div>
+                            </div> */}
 
-                            <div className="row column-3">
+                            {/* <div className="row column-3">
                                 <div className="buttons">
                                     <IonButton className="social apple" type="submit" expand="block"><img src="assets/img/logo/Apple_logo_black.png" alt="" />APPLE</IonButton>
                                 </div>
                                 <div className="buttons">
-                                    <IonButton className="social google" type="submit" expand="block"><img src="assets/img/logo/google.png" alt="" />GOOGLE</IonButton>
+                                    <GoogleSignin
+                                        submitAuth = {authSubmit}
+                                        Error = {setServerError}
+                                    />
+                                   
+                                    
                                 </div>
                                 <div className="buttons">
-                                    <IonButton className="social facebook" type="submit" expand="block"><img src="assets/img/logo/fb.jpeg" alt="" />FACEBOOK</IonButton>
+                                    <FacebookSignin
+                                    />
                                 </div>
-                            </div>
+                            </div> */}
                             <p className="margin-top-20">Already having an account? <a style={{color: "black", fontWeight: "bold", cursor: "pointer"}} onClick={()=> {setStep("signin");}}>Sign in</a>.</p>
                             
                         </div>

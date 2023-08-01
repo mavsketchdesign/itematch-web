@@ -1,181 +1,564 @@
-.ListingModal {  
-    --width: 80%;
-    --height: 90%;
-    &::part(content) {
-        border-radius: 30px;
-        box-sizing: border-box;
-        border: 10px solid #626262;
-    }
 
-    &::part(backdrop) {
-        opacity: 0.5;
-        --backdrop-opacity: 0.5;
-    }
-
-  #ion-react-wrapper {
-        background: white;
-        position: relative;
-        border-radius: 30px;
-        
-
-        .closeButton {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            border-radius: 100%;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #dfdfdf;
+// Desktop
+@media only screen and (min-width: 992px) {
+    .ListingModal {  
+        --width: 80%;
+        --height: 90%;
+        &::part(content) {
+            border-radius: 30px;
             box-sizing: border-box;
-            padding: 10px;
-            cursor: pointer;
-
-            
-            z-index: 11;
-
-            img {
-                width: 100%;
-            }
+            border: 10px solid #626262;
         }
 
-        .search_filter {
-            --background: #ebebeb !important;
-            // border: 1px black solid;
-            // border-radius: 15px;
-            color: rgb(72, 72, 72);
-            // margin: 4px 0;
+        &::part(backdrop) {
+            opacity: 0.5;
+            --backdrop-opacity: 0.5;
+        }
+
+    #ion-react-wrapper {
+            background: white;
             position: relative;
+            border-radius: 30px;
+            
 
-            .native-input[type=date]::-webkit-calendar-picker-indicator {
-                filter: invert(1);
-                color: black;
-              }
-
-            .required {
+            .closeButton {
                 position: absolute;
                 top: 10px;
-                right: 15px;
-                font-size: 10px;
-                color: red;
-            }
-
-            ion-label {
-                color: grey;
-                // font-size: 12px;
-            }
-            &::part(native) {
-                --min-height: 100% !important;
-                --color: black;
-                color: black;
-            }
-        }
-
-        ion-content {
-            --overflow-y: auto;
-            --background: white;
-            height: 100%;
-
-
-            .setup_title {
-                margin-bottom: 20px;
-                box-sizing: border-box;
-                padding: 20px;
-                .header_text {
-                    display: flex;
-                    align-items: flex-end;
-
-                    img {
-                        height: 50px;
-                        width: auto;
-                        margin-right: 10px;
-                    }
-
-                    span {
-                        font-size: 40px;
-                        font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-                        color: #000000;
-                    }
-                }
-
-                .sub_text {
-                    color: black;
-                    font-size: 18px;
-                    margin: 0 0 10px !important;
-                }
-            }
-
-            
-
-            .listing_guide_box {
+                right: 10px;
+                border-radius: 100%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #dfdfdf;
                 box-sizing: border-box;
                 padding: 10px;
-                color: black;
-                --overflow: auto;
+                cursor: pointer;
 
-                .categories_wrapper {
-                    margin: 0 0 20px;
+                
+                z-index: 11;
 
-                    .cat_box {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .search_filter {
+                --background: #ebebeb !important;
+                // border: 1px black solid;
+                // border-radius: 15px;
+                color: rgb(72, 72, 72);
+                // margin: 4px 0;
+                position: relative;
+
+                .native-input[type=date]::-webkit-calendar-picker-indicator {
+                    filter: invert(1);
+                    color: black;
+                }
+
+                .required {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    font-size: 10px;
+                    color: red;
+                }
+
+                ion-label {
+                    color: grey;
+                    // font-size: 12px;
+                }
+                &::part(native) {
+                    --min-height: 100% !important;
+                    --color: black;
+                    color: black;
+                }
+            }
+
+            ion-content {
+                --overflow-y: auto;
+                --background: white;
+                height: 100%;
+
+
+                .setup_title {
+                    margin-bottom: 20px;
+                    box-sizing: border-box;
+                    padding: 20px;
+                    .header_text {
                         display: flex;
+                        align-items: flex-end;
 
-
-                        .num {
-                            font-size: 20px;
-                            font-weight: bold;
-                            margin-right: 15px;
-                            text-align: right;
-                            width: 5%;
-                            text-transform: uppercase;
-                            font-size: 20px;
-                            font-weight: bold;
+                        img {
+                            height: 50px;
+                            width: auto;
+                            margin-right: 10px;
                         }
 
-                        .inner_cat {
-                            width: calc(95%);
-                            .title {
+                        span {
+                            font-size: 40px;
+                            font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+                            color: #000000;
+                        }
+                    }
+
+                    .sub_text {
+                        color: black;
+                        font-size: 18px;
+                        margin: 0 0 10px !important;
+                    }
+                }
+
+                
+
+                .listing_guide_box {
+                    box-sizing: border-box;
+                    padding: 10px;
+                    color: black;
+                    --overflow: auto;
+
+                    .categories_wrapper {
+                        margin: 0 0 20px;
+
+                        .cat_box {
+                            display: flex;
+
+
+                            .num {
+                                font-size: 20px;
+                                font-weight: bold;
+                                margin-right: 15px;
+                                text-align: right;
+                                width: 5%;
                                 text-transform: uppercase;
                                 font-size: 20px;
                                 font-weight: bold;
-                                margin-bottom: 10px;
                             }
 
-                            .sub_categories_wrapper {
-                                
-                                .sub_cat_box {
-                                    margin: 0 0 10px;
-                                    display: flex;
+                            .inner_cat {
+                                width: calc(95%);
+                                .title {
+                                    text-transform: uppercase;
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    margin-bottom: 10px;
+                                }
 
-                                    .sub_cat_title {
+                                .sub_categories_wrapper {
+                                    
+                                    .sub_cat_box {
+                                        margin: 0 0 10px;
                                         display: flex;
-                                        margin-right: 10px;
-                                        width: 20%;
 
-                                        .sub_cat_num {
-                                            font-size: 15px;
-                                            font-weight: bold;
+                                        .sub_cat_title {
+                                            display: flex;
                                             margin-right: 10px;
-                                            text-align: right;
-                                        }
-                                        .sub_title {
-                                            font-size: 15px;
-                                            font-weight: bold;
-                                            text-align: left;
-                                            width: 100%;
-                                        }
-                                    }
+                                            width: 20%;
 
-                                    .sub_description {
-                                        width: 80%;
-                                        font-size: 15px;
+                                            .sub_cat_num {
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                margin-right: 10px;
+                                                text-align: right;
+                                            }
+                                            .sub_title {
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                text-align: left;
+                                                width: 100%;
+                                            }
+                                        }
+
+                                        .sub_description {
+                                            width: 80%;
+                                            font-size: 15px;
+                                        }
                                     }
                                 }
+
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Tablet
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+    .ListingModal {  
+        --width: 100%;
+        --height: 100%;
+        &::part(content) {
+            border-radius: 30px;
+            box-sizing: border-box;
+            border: 10px solid #626262;
+        }
+
+        &::part(backdrop) {
+            opacity: 0.5;
+            --backdrop-opacity: 0.5;
+        }
+
+    #ion-react-wrapper {
+            background: white;
+            position: relative;
+            border-radius: 30px;
+            
+
+            .closeButton {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                border-radius: 100%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #dfdfdf;
+                box-sizing: border-box;
+                padding: 10px;
+                cursor: pointer;
+
+                
+                z-index: 11;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .search_filter {
+                --background: #ebebeb !important;
+                // border: 1px black solid;
+                // border-radius: 15px;
+                color: rgb(72, 72, 72);
+                // margin: 4px 0;
+                position: relative;
+
+                .native-input[type=date]::-webkit-calendar-picker-indicator {
+                    filter: invert(1);
+                    color: black;
+                }
+
+                .required {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    font-size: 10px;
+                    color: red;
+                }
+
+                ion-label {
+                    color: grey;
+                    // font-size: 12px;
+                }
+                &::part(native) {
+                    --min-height: 100% !important;
+                    --color: black;
+                    color: black;
+                }
+            }
+
+            ion-content {
+                --overflow-y: auto;
+                --background: white;
+                height: 100%;
+
+
+                .setup_title {
+                    margin-bottom: 20px;
+                    box-sizing: border-box;
+                    padding: 20px;
+                    .header_text {
+                        display: flex;
+                        align-items: flex-end;
+
+                        img {
+                            height: 50px;
+                            width: auto;
+                            margin-right: 10px;
+                        }
+
+                        span {
+                            font-size: 40px;
+                            font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+                            color: #000000;
+                        }
+                    }
+
+                    .sub_text {
+                        color: black;
+                        font-size: 18px;
+                        margin: 0 0 10px !important;
+                    }
+                }
+
+                
+
+                .listing_guide_box {
+                    box-sizing: border-box;
+                    padding: 10px;
+                    color: black;
+                    --overflow: auto;
+
+                    .categories_wrapper {
+                        margin: 0 0 20px;
+
+                        .cat_box {
+                            display: flex;
+
+
+                            .num {
+                                font-size: 20px;
+                                font-weight: bold;
+                                margin-right: 15px;
+                                text-align: right;
+                                width: 5%;
+                                text-transform: uppercase;
+                                font-size: 20px;
+                                font-weight: bold;
                             }
 
+                            .inner_cat {
+                                width: calc(95%);
+                                .title {
+                                    text-transform: uppercase;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    margin-bottom: 10px;
+                                }
+
+                                .sub_categories_wrapper {
+                                    
+                                    .sub_cat_box {
+                                        margin: 0 0 10px;
+                                        display: flex;
+
+                                        .sub_cat_title {
+                                            display: flex;
+                                            margin-right: 5px;
+                                            width: 25%;
+
+                                            .sub_cat_num {
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                margin-right: 10px;
+                                                text-align: right;
+                                            }
+                                            .sub_title {
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                text-align: left;
+                                                width: 100%;
+                                            }
+                                        }
+
+                                        .sub_description {
+                                            width: 75%;
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
+
+                            }
+                            
                         }
-                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Mobile
+@media only screen and (max-width: 601px) {
+    .ListingModal {  
+        --width: 100%;
+        --height: 100%;
+        &::part(content) {
+            border-radius: 30px;
+            box-sizing: border-box;
+            border: 10px solid #626262;
+        }
+
+        &::part(backdrop) {
+            opacity: 0.5;
+            --backdrop-opacity: 0.5;
+        }
+
+    #ion-react-wrapper {
+            background: white;
+            position: relative;
+            border-radius: 30px;
+            
+
+            .closeButton {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                border-radius: 100%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #dfdfdf;
+                box-sizing: border-box;
+                padding: 10px;
+                cursor: pointer;
+
+                
+                z-index: 11;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .search_filter {
+                --background: #ebebeb !important;
+                // border: 1px black solid;
+                // border-radius: 15px;
+                color: rgb(72, 72, 72);
+                // margin: 4px 0;
+                position: relative;
+
+                .native-input[type=date]::-webkit-calendar-picker-indicator {
+                    filter: invert(1);
+                    color: black;
+                }
+
+                .required {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    font-size: 10px;
+                    color: red;
+                }
+
+                ion-label {
+                    color: grey;
+                    // font-size: 12px;
+                }
+                &::part(native) {
+                    --min-height: 100% !important;
+                    --color: black;
+                    color: black;
+                }
+            }
+
+            ion-content {
+                --overflow-y: auto;
+                --background: white;
+                height: 100%;
+
+
+                .setup_title {
+                    margin-bottom: 20px;
+                    box-sizing: border-box;
+                    padding: 20px;
+                    .header_text {
+                        display: flex;
+                        align-items: flex-end;
+
+                        img {
+                            height: 35px;
+                            width: auto;
+                            margin-right: 10px;
+                        }
+
+                        span {
+                            font-size: 29px;
+                            font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+                            color: #000000;
+                        }
+                    }
+
+                    .sub_text {
+                        color: black;
+                        font-size: 14px;
+                        margin: 0 0 10px !important;
+                    }
+                }
+
+                
+
+                .listing_guide_box {
+                    box-sizing: border-box;
+                    padding: 10px;
+                    color: black;
+                    --overflow: auto;
+
+                    .categories_wrapper {
+                        margin: 0 0 20px;
+
+                        .cat_box {
+                            display: flex;
+
+
+                            .num {
+                                font-weight: bold;
+                                margin-right: 15px;
+                                text-align: right;
+                                width: 7%;
+                                text-transform: uppercase;
+                                font-size: 17px;
+                                font-weight: bold;
+                            }
+
+                            .inner_cat {
+                                width: calc(93%);
+                                .title {
+                                    text-transform: uppercase;
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    margin-bottom: 10px;
+                                }
+
+                                .sub_categories_wrapper {
+                                    
+                                    .sub_cat_box {
+                                        margin: 0 0 10px;
+                                        display: flex;
+                                        flex-direction: column;
+
+                                        .sub_cat_title {
+                                            display: flex;
+                                            margin-right: 5px;
+                                            margin-left: -15px;
+                                            width: 100%;
+
+                                            .sub_cat_num {
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                margin-right: 10px;
+                                                text-align: right;
+                                            }
+                                            .sub_title {
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                text-align: left;
+                                                width: 100%;
+                                            }
+                                        }
+
+                                        .sub_description {
+                                            width: 100%;
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
+
+                            }
+                            
+                        }
                     }
                 }
             }
